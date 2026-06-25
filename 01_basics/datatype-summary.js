@@ -1,42 +1,42 @@
-//  Primitive
+// //  Primitive
 
-//  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
+// //  7 types : String, Number, Boolearn, null, undefined, Symbol, BigInt
 
-const score = 100
-const scoreValue = 100.3
+// const score = 100
+// const scoreValue = 100.3
 
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;  // typeof undefined
+// const isLoggedIn = false
+// const outsideTemp = null
+// let userEmail;  // typeof undefined
 
-const id = Symbol('123')
-const anotherId = Symbol('123')  
+// const id = Symbol('123')
+// const anotherId = Symbol('123')  
 
-console.log(id === anotherId); //false (every Symbol is unique.)
+// console.log(id === anotherId); //false (every Symbol is unique.)
 
-// const bigNumber = 3456543576654356754n   // The n at the end makes it a BigInt.
+// // const bigNumber = 3456543576654356754n   // The n at the end makes it a BigInt.
 
 
 
-// Reference (Non primitive)
+// // Reference (Non primitive)
 
-// Array, Objects (in curly bracket (key:value)), Functions
+// // Array, Objects (in curly bracket (key:value)), Functions
 
-const heros = ["shaktiman", "naagraj", "doga"];
-let myObj = {
-    name: "hitesh",
-    age: 22,
-}
+// const heros = ["shaktiman", "naagraj", "doga"];
+// let myObj = {
+//     name: "hitesh",
+//     age: 22,
+// }
 
-const myFunction = function(){
-    console.log("Hello world");
-}
+// const myFunction = function(){
+//     console.log("Hello world");
+// }
 
-console.log(typeof anotherId);
-console.log(typeof BigInt);
-console.log(typeof myFunction); // Although functions are objects internally, typeof returns "function".
-console.log(typeof heros);
-console.log(typeof null);
+// console.log(typeof anotherId);
+// console.log(typeof BigInt);
+// console.log(typeof myFunction); // Although functions are objects internally, typeof returns "function".
+// console.log(typeof heros);
+// console.log(typeof null);
 
 // https://262.ecma-international.org/5.1/#sec-11.4.3
 
@@ -58,3 +58,27 @@ console.log(typeof null);
 
 
 */
+
+///******************************************************************** */
+
+// Stack (primitive) ,Heap (Non primitive)
+
+let myYoutubename="hiteshchoudharydotcom"
+let anothername = myYoutubename
+anothername="chaiOrCode"
+
+//Reason: Primitive values are copied by value, so changing one variable does not affect the other.
+
+console.log(myYoutubename);
+console.log(anothername);
+
+let userOne={
+    email:"user@google.com",
+    upi:"user@ybl"
+}
+let userTwo =userOne
+userTwo.email="hitesh@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
